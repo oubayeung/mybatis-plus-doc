@@ -1,0 +1,70 @@
+(function(){
+  'use strict';
+
+  function changeLang(){
+    var lang = this.value;
+    var canonical = this.dataset.canonical;
+    if (lang === 'zh-cn') lang = '';
+    if (lang) lang += '/';
+
+    location.href = '/' + lang + canonical;
+  }
+
+  document.getElementById('lang-select').addEventListener('change', changeLang);
+  document.getElementById('mobile-lang-select').addEventListener('change', changeLang);
+})();
+(function(){
+  'use strict';
+
+  var header = document.getElementById('header');
+  var container = document.getElementById('container');
+  var toc = document.getElementById('article-toc');
+  var tocTop = document.getElementById('article-toc-top');
+  var headerHeight = header.clientHeight;
+
+  if (!toc) return;
+
+  function updateSidebarPosition(){
+    var scrollTop = container.scrollTop;
+
+    if (scrollTop > headerHeight){
+      toc.classList.add('fixed');
+    } else {
+      toc.classList.remove('fixed');
+    }
+  }
+
+  container.addEventListener('scroll', function(){
+    window.requestAnimationFrame(updateSidebarPosition);
+  });
+
+  updateSidebarPosition();
+
+  tocTop.addEventListener('click', function(e){
+    e.preventDefault();
+    container.scrollTop = 0;
+  });
+})();
+(function(){
+  'use strict';
+
+  var body = document.getElementsByTagName('body')[0];
+  var navToggle = document.getElementById('mobile-nav-toggle');
+  var container = document.getElementById('container');
+  var dimmer = document.getElementById('mobile-nav-dimmer');
+  var CLASS_NAME = 'mobile-nav-on';
+  if (!navToggle) return;
+
+  navToggle.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    body.classList.toggle(CLASS_NAME);
+  });
+
+  dimmer.addEventListener('click', function(e){
+    if (!body.classList.contains(CLASS_NAME)) return;
+
+    e.preventDefault();
+    body.classList.remove(CLASS_NAME);
+  });
+})();
