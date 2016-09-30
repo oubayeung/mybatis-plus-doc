@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>注入自定义公共方法SQL | Mybatis-Plus</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://mp.baomidou.com/docs/sql-injector.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://mp.baomidou.com/en/docs/sql-injector.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://mp.baomidou.com/docs/sql-injector.html">
+    
+  
+  <!-- CSS -->
+  <!-- build:css build/css/baomidou.css -->
+  <link rel="stylesheet" href="/css/baomidou.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Mybatis-Plus">
+  <!-- Open Graph -->
+  <meta name="description" content="自定义注入全表删除方法  deteleAll
+
+自定义 MySqlInjector 注入类 java 代码如下：public class MySqlInjector extends AutoSqlInjector &amp;#123;	@Override	public void inject(Configuration configuration, MapperBuilderAssistant buil">
+<meta property="og:type" content="website">
+<meta property="og:title" content="注入自定义公共方法SQL">
+<meta property="og:url" content="https://mp.baomidou.com/docs/sql-injector.html">
+<meta property="og:site_name" content="Mybatis-Plus">
+<meta property="og:description" content="自定义注入全表删除方法  deteleAll
+
+自定义 MySqlInjector 注入类 java 代码如下：public class MySqlInjector extends AutoSqlInjector &amp;#123;	@Override	public void inject(Configuration configuration, MapperBuilderAssistant buil">
+<meta property="og:updated_time" content="2016-09-30T04:14:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="注入自定义公共方法SQL">
+<meta name="twitter:description" content="自定义注入全表删除方法  deteleAll
+
+自定义 MySqlInjector 注入类 java 代码如下：public class MySqlInjector extends AutoSqlInjector &amp;#123;	@Override	public void inject(Configuration configuration, MapperBuilderAssistant buil">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/" class="main-nav-link">首页</a><a href="/docs/" class="main-nav-link">文档</a><a href="/news/" class="main-nav-link">动态</a>
+      <a href="https://github.com/baomidou/mybatis-plus" class="main-nav-link"><i class="fa fa-github-alt fa-fw"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/sql-injector.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">注入自定义公共方法SQL</h1>
+                <a href="https://github.com/baomidou/mybatis-plus-doc/edit/master/source/docs/sql-injector.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <blockquote>
+<p>自定义注入全表删除方法  deteleAll</p>
+</blockquote>
+<h2 id="自定义-MySqlInjector-注入类-java-代码如下：" class="article-heading"><a href="#自定义-MySqlInjector-注入类-java-代码如下：" class="headerlink" title="自定义 MySqlInjector 注入类 java 代码如下："></a>自定义 MySqlInjector 注入类 <code>java</code> 代码如下：<a class="article-anchor" href="#自定义-MySqlInjector-注入类-java-代码如下：" aria-hidden="true"></a></h2><figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySqlInjector</span> <span class="keyword">extends</span> <span class="title">AutoSqlInjector</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inject</span><span class="params">(Configuration configuration, MapperBuilderAssistant builderAssistant, Class&lt;?&gt; mapperClass,</span></span></div><div class="line">			Class&lt;?&gt; modelClass, TableInfo table) &#123;</div><div class="line">		<span class="comment">/* 添加一个自定义方法 */</span></div><div class="line">		deleteAllUser(mapperClass, modelClass, table);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteAllUser</span><span class="params">(Class&lt;?&gt; mapperClass, Class&lt;?&gt; modelClass, TableInfo table)</span> </span>&#123;</div><div class="line"></div><div class="line">		<span class="comment">/* 执行 SQL ，动态 SQL 参考类 SqlMethod */</span></div><div class="line">		String sql = <span class="string">"delete from "</span> + table.getTableName();</div><div class="line"></div><div class="line">		<span class="comment">/* mapper 接口方法名一致 */</span></div><div class="line">		String method = <span class="string">"deleteAll"</span>;</div><div class="line">		SqlSource sqlSource = languageDriver.createSqlSource(configuration, sql, modelClass);</div><div class="line">		<span class="keyword">this</span>.addMappedStatement(mapperClass, method, sqlSource, SqlCommandType.DELETE, Integer.class);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="当然你的-mapper-java-接口类需要申明使用方法-deleteAll-如下" class="article-heading"><a href="#当然你的-mapper-java-接口类需要申明使用方法-deleteAll-如下" class="headerlink" title="当然你的 mapper.java 接口类需要申明使用方法 deleteAll 如下"></a>当然你的 mapper.java 接口类需要申明使用方法 deleteAll 如下<a class="article-anchor" href="#当然你的-mapper-java-接口类需要申明使用方法-deleteAll-如下" aria-hidden="true"></a></h2><figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> <span class="keyword">extends</span> <span class="title">AutoMapper</span>&lt;<span class="title">User</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 自定义注入方法</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">deleteAll</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="最后一步注入启动" class="article-heading"><a href="#最后一步注入启动" class="headerlink" title="最后一步注入启动"></a>最后一步注入启动<a class="article-anchor" href="#最后一步注入启动" aria-hidden="true"></a></h2><figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- MyBatis SqlSessionFactoryBean 配置 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean"</span>&gt;</span></div><div class="line">	.....</div><div class="line">	</div><div class="line">  <span class="comment">&lt;!-- 自定义注入 deleteAll 方法  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"sqlInjector"</span> <span class="attr">ref</span>=<span class="string">"mySqlInjector"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 自定义注入器 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"mySqlInjector"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.test.MySqlInjector"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>完成如上几步共享，注入完成！可以开始使用了。。。</li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2016-09-30T04:14:29.000Z" itemprop="dateModified">上次更新：2016-09-30</time>
+                <a href="auto-fill.html" class="article-footer-prev" title="表公共字段自定义填充"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="hot-loading.html" class="article-footer-next" title="Mapper对应XML文件热加载"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义-MySqlInjector-注入类-java-代码如下："><span class="toc-text">自定义 MySqlInjector 注入类 java 代码如下：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#当然你的-mapper-java-接口类需要申明使用方法-deleteAll-如下"><span class="toc-text">当然你的 mapper.java 接口类需要申明使用方法 deleteAll 如下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后一步注入启动"><span class="toc-text">最后一步注入启动</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">简介</a><a href="overview.html" class="sidebar-link">概览</a><a href="futures.html" class="sidebar-link">愿景</a><a href="architecture.html" class="sidebar-link">构架原理</a><strong class="sidebar-title">如何安装</strong><a href="dependency.html" class="sidebar-link">安装及依赖说明</a><a href="configuration.html" class="sidebar-link">集成教程</a><strong class="sidebar-title">如何使用</strong><a href="generate-code.html" class="sidebar-link">代码生成</a><a href="base-mapper.html" class="sidebar-link">通用Mapper和Service</a><a href="entity-wrapper.html" class="sidebar-link">查询条件构造器EntityWrapper</a><a href="page-plugin.html" class="sidebar-link">分页插件</a><a href="performance-analysis-plugin.html" class="sidebar-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="sidebar-link">执行分析插件</a><a href="keywords-transfer.html" class="sidebar-link">数据库表关键词转义配置</a><a href="auto-fill.html" class="sidebar-link">表公共字段自定义填充</a><a href="sql-injector.html" class="sidebar-link current">注入自定义公共方法SQL</a><a href="hot-loading.html" class="sidebar-link">Mapper对应XML文件热加载</a><strong class="sidebar-title">常见问题</strong><a href="faq-list.html" class="sidebar-link">问题列表</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2016 <a href="https://zespia.tw/" target="_blank">baomidou</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://github.com/baomidou/mybatis-plus" class="footer-link" target="_blank"><i class="fa fa-github-alt fa-fw"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link">首页</a><a href="/docs/" class="mobile-nav-link">文档</a><a href="/news/" class="mobile-nav-link">动态</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/baomidou/mybatis-plus" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">简介</a><a href="overview.html" class="mobile-nav-link">概览</a><a href="futures.html" class="mobile-nav-link">愿景</a><a href="architecture.html" class="mobile-nav-link">构架原理</a><strong class="mobile-nav-title">如何安装</strong><a href="dependency.html" class="mobile-nav-link">安装及依赖说明</a><a href="configuration.html" class="mobile-nav-link">集成教程</a><strong class="mobile-nav-title">如何使用</strong><a href="generate-code.html" class="mobile-nav-link">代码生成</a><a href="base-mapper.html" class="mobile-nav-link">通用Mapper和Service</a><a href="entity-wrapper.html" class="mobile-nav-link">查询条件构造器EntityWrapper</a><a href="page-plugin.html" class="mobile-nav-link">分页插件</a><a href="performance-analysis-plugin.html" class="mobile-nav-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="mobile-nav-link">执行分析插件</a><a href="keywords-transfer.html" class="mobile-nav-link">数据库表关键词转义配置</a><a href="auto-fill.html" class="mobile-nav-link">表公共字段自定义填充</a><a href="sql-injector.html" class="mobile-nav-link current">注入自定义公共方法SQL</a><a href="hot-loading.html" class="mobile-nav-link">Mapper对应XML文件热加载</a><strong class="mobile-nav-title">常见问题</strong><a href="faq-list.html" class="mobile-nav-link">问题列表</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/sql-injector.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>

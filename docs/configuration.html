@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>集成教程 | Mybatis-Plus</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://mp.baomidou.com/docs/configuration.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://mp.baomidou.com/en/docs/configuration.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://mp.baomidou.com/docs/configuration.html">
+    
+  
+  <!-- CSS -->
+  <!-- build:css build/css/baomidou.css -->
+  <link rel="stylesheet" href="/css/baomidou.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Mybatis-Plus">
+  <!-- Open Graph -->
+  <meta name="description" content="SpringMVC方式在进行配置之前，请确保MP本地和其依赖包都已配置好，详见安装及依赖说明
+
+spring-mybatis.xml
+
+&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="集成教程">
+<meta property="og:url" content="https://mp.baomidou.com/docs/configuration.html">
+<meta property="og:site_name" content="Mybatis-Plus">
+<meta property="og:description" content="SpringMVC方式在进行配置之前，请确保MP本地和其依赖包都已配置好，详见安装及依赖说明
+
+spring-mybatis.xml
+
+&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;b">
+<meta property="og:updated_time" content="2016-09-30T04:12:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="集成教程">
+<meta name="twitter:description" content="SpringMVC方式在进行配置之前，请确保MP本地和其依赖包都已配置好，详见安装及依赖说明
+
+spring-mybatis.xml
+
+&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;b">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/" class="main-nav-link">首页</a><a href="/docs/" class="main-nav-link">文档</a><a href="/news/" class="main-nav-link">动态</a>
+      <a href="https://github.com/baomidou/mybatis-plus" class="main-nav-link"><i class="fa fa-github-alt fa-fw"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/configuration.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">集成教程</h1>
+                <a href="https://github.com/baomidou/mybatis-plus-doc/edit/master/source/docs/configuration.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h1 id="SpringMVC方式" class="article-heading"><a href="#SpringMVC方式" class="headerlink" title="SpringMVC方式"></a>SpringMVC方式<a class="article-anchor" href="#SpringMVC方式" aria-hidden="true"></a></h1><p>在进行配置之前，请确保MP本地和其依赖包都已配置好，详见<a href="dependency.md">安装及依赖说明</a></p>
+<blockquote>
+<p>spring-mybatis.xml</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- MyBatis SqlSessionFactoryBean 配置 --&gt;</span></div><div class="line"><span class="comment">&lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 配置数据源 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 配置Mybatis配置文件 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"configLocation"</span> <span class="attr">value</span>=<span class="string">"classpath:xml/mybatis-config.xml"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 配置别名包路径 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"typeAliasesPackage"</span> <span class="attr">value</span>=<span class="string">"xxx.entity"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 配置Mapper扫描路径（IDEA系列编辑器需要特别注意，因为IDEA的设置问题，src中的xml文件是不会被编译的，如果放在src中可能会报错，解决办法详见 常用问题-Invalid bound statement (not found) 错误如何解决?） --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"mapperLocations"</span> <span class="attr">value</span>=<span class="string">"classpath:com/xx/mapper/xml/*Mapper.xml"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 插件配置项  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"plugins"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">array</span>&gt;</span></div><div class="line">            <span class="comment">&lt;!-- 分页插件配置 --&gt;</span></div><div class="line">	        <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"paginationInterceptor"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.mybatisplus.plugins.PaginationInterceptor"</span>&gt;</span></div><div class="line">	            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dialectType"</span> <span class="attr">value</span>=<span class="string">"mysql"</span> /&gt;</span></div><div class="line">	        <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">array</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- Oracle需要添加该项 --&gt;</span></div><div class="line">    <span class="comment">&lt;!-- &lt;property name="dbType" value="oracle" /&gt; --&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- 全局表为下划线命名设置 true --&gt;</span></div><div class="line">    <span class="comment">&lt;!-- &lt;property name="dbColumnUnderline" value="true" /&gt; --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 配置Mapper扫描路径 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"mapperScannerConfigurer"</span> <span class="attr">class</span>=<span class="string">"org.mybatis.spring.mapper.MapperScannerConfigurer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"basePackage"</span> <span class="attr">value</span>=<span class="string">"xxx.mapper"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="其他方式待补充……" class="article-heading"><a href="#其他方式待补充……" class="headerlink" title="其他方式待补充……"></a>其他方式待补充……<a class="article-anchor" href="#其他方式待补充……" aria-hidden="true"></a></h1>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2016-09-30T04:12:07.000Z" itemprop="dateModified">上次更新：2016-09-30</time>
+                <a href="dependency.html" class="article-footer-prev" title="安装及依赖说明"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="generate-code.html" class="article-footer-next" title="代码生成"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringMVC方式"><span class="toc-text">SpringMVC方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他方式待补充……"><span class="toc-text">其他方式待补充……</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">简介</a><a href="overview.html" class="sidebar-link">概览</a><a href="futures.html" class="sidebar-link">愿景</a><a href="architecture.html" class="sidebar-link">构架原理</a><strong class="sidebar-title">如何安装</strong><a href="dependency.html" class="sidebar-link">安装及依赖说明</a><a href="configuration.html" class="sidebar-link current">集成教程</a><strong class="sidebar-title">如何使用</strong><a href="generate-code.html" class="sidebar-link">代码生成</a><a href="base-mapper.html" class="sidebar-link">通用Mapper和Service</a><a href="entity-wrapper.html" class="sidebar-link">查询条件构造器EntityWrapper</a><a href="page-plugin.html" class="sidebar-link">分页插件</a><a href="performance-analysis-plugin.html" class="sidebar-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="sidebar-link">执行分析插件</a><a href="keywords-transfer.html" class="sidebar-link">数据库表关键词转义配置</a><a href="auto-fill.html" class="sidebar-link">表公共字段自定义填充</a><a href="sql-injector.html" class="sidebar-link">注入自定义公共方法SQL</a><a href="hot-loading.html" class="sidebar-link">Mapper对应XML文件热加载</a><strong class="sidebar-title">常见问题</strong><a href="faq-list.html" class="sidebar-link">问题列表</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2016 <a href="https://zespia.tw/" target="_blank">baomidou</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://github.com/baomidou/mybatis-plus" class="footer-link" target="_blank"><i class="fa fa-github-alt fa-fw"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link">首页</a><a href="/docs/" class="mobile-nav-link">文档</a><a href="/news/" class="mobile-nav-link">动态</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/baomidou/mybatis-plus" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">简介</a><a href="overview.html" class="mobile-nav-link">概览</a><a href="futures.html" class="mobile-nav-link">愿景</a><a href="architecture.html" class="mobile-nav-link">构架原理</a><strong class="mobile-nav-title">如何安装</strong><a href="dependency.html" class="mobile-nav-link">安装及依赖说明</a><a href="configuration.html" class="mobile-nav-link current">集成教程</a><strong class="mobile-nav-title">如何使用</strong><a href="generate-code.html" class="mobile-nav-link">代码生成</a><a href="base-mapper.html" class="mobile-nav-link">通用Mapper和Service</a><a href="entity-wrapper.html" class="mobile-nav-link">查询条件构造器EntityWrapper</a><a href="page-plugin.html" class="mobile-nav-link">分页插件</a><a href="performance-analysis-plugin.html" class="mobile-nav-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="mobile-nav-link">执行分析插件</a><a href="keywords-transfer.html" class="mobile-nav-link">数据库表关键词转义配置</a><a href="auto-fill.html" class="mobile-nav-link">表公共字段自定义填充</a><a href="sql-injector.html" class="mobile-nav-link">注入自定义公共方法SQL</a><a href="hot-loading.html" class="mobile-nav-link">Mapper对应XML文件热加载</a><strong class="mobile-nav-title">常见问题</strong><a href="faq-list.html" class="mobile-nav-link">问题列表</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/configuration.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>

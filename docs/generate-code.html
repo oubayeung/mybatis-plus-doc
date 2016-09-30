@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>代码生成 | Mybatis-Plus</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://mp.baomidou.com/docs/generate-code.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://mp.baomidou.com/en/docs/generate-code.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://mp.baomidou.com/docs/generate-code.html">
+    
+  
+  <!-- CSS -->
+  <!-- build:css build/css/baomidou.css -->
+  <link rel="stylesheet" href="/css/baomidou.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Mybatis-Plus">
+  <!-- Open Graph -->
+  <meta name="description" content="在代码生成之前，首先进行配置，MP提供了大量的自定义设置，生成的代码完全能够满足各类型的需求，如果你发现配置不能满足你的需求，欢迎提交issue和pull-request，有兴趣的也可以查看源码进行了解。
+参数说明参数相关的配置，详见ConfigGenerator类
+
+saveDir
+类型：String描述：生成代码存放目录
+
+entityPackage
+类型：String描述：Entity类路径">
+<meta property="og:type" content="website">
+<meta property="og:title" content="代码生成">
+<meta property="og:url" content="https://mp.baomidou.com/docs/generate-code.html">
+<meta property="og:site_name" content="Mybatis-Plus">
+<meta property="og:description" content="在代码生成之前，首先进行配置，MP提供了大量的自定义设置，生成的代码完全能够满足各类型的需求，如果你发现配置不能满足你的需求，欢迎提交issue和pull-request，有兴趣的也可以查看源码进行了解。
+参数说明参数相关的配置，详见ConfigGenerator类
+
+saveDir
+类型：String描述：生成代码存放目录
+
+entityPackage
+类型：String描述：Entity类路径">
+<meta property="og:updated_time" content="2016-09-30T04:13:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="代码生成">
+<meta name="twitter:description" content="在代码生成之前，首先进行配置，MP提供了大量的自定义设置，生成的代码完全能够满足各类型的需求，如果你发现配置不能满足你的需求，欢迎提交issue和pull-request，有兴趣的也可以查看源码进行了解。
+参数说明参数相关的配置，详见ConfigGenerator类
+
+saveDir
+类型：String描述：生成代码存放目录
+
+entityPackage
+类型：String描述：Entity类路径">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/" class="main-nav-link">首页</a><a href="/docs/" class="main-nav-link">文档</a><a href="/news/" class="main-nav-link">动态</a>
+      <a href="https://github.com/baomidou/mybatis-plus" class="main-nav-link"><i class="fa fa-github-alt fa-fw"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/generate-code.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">代码生成</h1>
+                <a href="https://github.com/baomidou/mybatis-plus-doc/edit/master/source/docs/generate-code.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>在代码生成之前，首先进行配置，MP提供了大量的自定义设置，生成的代码完全能够满足各类型的需求，如果你发现配置不能满足你的需求，欢迎提交issue和pull-request，有兴趣的也可以查看<a href="https://github.com/baomidou/mybatis-plus/tree/master/mybatis-plus/src/main/java/com/baomidou/mybatisplus/generator" target="_blank" rel="external">源码</a>进行了解。</p>
+<h1 id="参数说明" class="article-heading"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明<a class="article-anchor" href="#参数说明" aria-hidden="true"></a></h1><p>参数相关的配置，详见<a href="https://github.com/baomidou/mybatis-plus/blob/master/mybatis-plus/src/main/java/com/baomidou/mybatisplus/generator/ConfigGenerator.java" target="_blank" rel="external">ConfigGenerator</a>类</p>
+<hr>
+<p><code>saveDir</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：生成代码存放目录</div></pre></td></tr></table></figure>
+<hr>
+<p><code>entityPackage</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：Entity类路径</div></pre></td></tr></table></figure>
+<hr>
+<p><code>mapperPackage</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：Mapper类路径</div></pre></td></tr></table></figure>
+<hr>
+<p><code>xmlPackage</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：Mapper对应的XML文件存放路径（默认为Mapper目录下的xml文件夹）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>servicePackage</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：Service类路径</div></pre></td></tr></table></figure>
+<hr>
+<p><code>serviceImplPackage</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：ServiceImpl类路径（默认为Service目录下的impl文件夹）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>superService</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：Service 父类包路径（通过该项，你可以自定义Service层的父类，实现自定义通用方法。若无需求，不用配置）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>superServiceImpl</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：ServiceImpl 父类包路径（同上）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>mapperName</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：自定义Mapper名称（采用&quot;%s&quot;做占位符，默认为&quot;%sMapper&quot;，生成后为FooMapper.java）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>mapperXMLName</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：自定义XML名称（采用&quot;%s&quot;做占位符，默认为&quot;%sMapper&quot;，生成后为FooMapper.xml）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>serviceName</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：自定义 Service 名称（采用&quot;%s&quot;做占位符，默认为&quot;I%sService&quot;，生成后为IFooService.java）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>serviceImplName</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：自定义 ServiceImpl 名称（采用&quot;%s&quot;做占位符，默认为&quot;%sServiceImpl&quot;，生成后为FooServiceImpl.java）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>tableNames</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String[]</div><div class="line">描述：要生成代码的表名称（若为空就直接指定所有表，格式为逗号分割）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>fileOverride</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：boolean</div><div class="line">描述：是否覆盖当前已有文件（true为覆盖，false为不覆盖）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>dbPrefix</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：boolean</div><div class="line">描述：设置数据库前缀（例如`mp_user`生成实体类，false 为 MpUser.java , true 为 User.java）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>dbColumnUnderline</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：boolean</div><div class="line">描述：设置数据库是否为下划线</div></pre></td></tr></table></figure>
+<hr>
+<p><code>dbDriverName</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：数据库驱动名（如com.mysql.jdbc.Driver）</div></pre></td></tr></table></figure>
+<hr>
+<p><code>dbUser</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：数据库username</div></pre></td></tr></table></figure>
+<hr>
+<p><code>dbPassword</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：数据库密码</div></pre></td></tr></table></figure>
+<hr>
+<p><code>dbUrl</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：String</div><div class="line">描述：数据库URL</div></pre></td></tr></table></figure>
+<hr>
+<p><code>idType</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">类型：boolean</div><div class="line">描述：ID主键策略（表主键 ID 生成类型, 自增该设置无效。详见主键策略选择）</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="主键策略选择" class="article-heading"><a href="#主键策略选择" class="headerlink" title="主键策略选择"></a>主键策略选择<a class="article-anchor" href="#主键策略选择" aria-hidden="true"></a></h1><p>MP支持以下4中主键策略，可根据需求自行选用：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IdType.AUTO</td>
+<td>数据库ID自增</td>
+</tr>
+<tr>
+<td>IdType.INPUT</td>
+<td>用户输入ID</td>
+</tr>
+<tr>
+<td>IdType.ID_WORKER</td>
+<td>全局唯一ID，内容为空自动填充（默认配置）</td>
+</tr>
+<tr>
+<td>IdType.UUID</td>
+<td>全局唯一ID，内容为空自动填充</td>
+</tr>
+</tbody>
+</table>
+<p>AUTO、INPUT和UUID大家都应该能够明白，这里主要讲一下ID_WORKER。首先得感谢开源项目<code>Sequence</code>，感谢作者<code>李景枫</code>。</p>
+<p>什么是Sequence？简单来说就是一个分布式高效有序ID生产黑科技工具，思路主要是来源于<code>Twitter-Snowflake算法</code>。这里不详细讲解Sequence，有兴趣的朋友请<a href="http://git.oschina.net/yu120/sequence" target="_blank" rel="external">点此去了解Sequence</a>。</p>
+<p>MP在Sequence的基础上进行部分优化，用于产生全局唯一ID，好的东西希望推广给大家，所以我们将ID_WORDER设置为默认配置。</p>
+<h1 id="表及字段命名策略选择" class="article-heading"><a href="#表及字段命名策略选择" class="headerlink" title="表及字段命名策略选择"></a>表及字段命名策略选择<a class="article-anchor" href="#表及字段命名策略选择" aria-hidden="true"></a></h1><p>在MP中，我们建议<code>数据库表名</code>采用<code>下划线命名方式</code>，而<code>表字段名</code>采用<code>驼峰命名方式</code>。</p>
+<p>这么做的原因是为了避免在对应实体类时产生的性能损耗，这样字段不用做映射就能直接和实体类对应。当然如果项目里不用考虑这点性能损耗，那么你采用下滑线也是没问题的，只需要在生成代码时配置<code>dbColumnUnderline</code>属性就可以。</p>
+<h1 id="如何生成代码" class="article-heading"><a href="#如何生成代码" class="headerlink" title="如何生成代码"></a>如何生成代码<a class="article-anchor" href="#如何生成代码" aria-hidden="true"></a></h1><h2 id="方式一、代码生成" class="article-heading"><a href="#方式一、代码生成" class="headerlink" title="方式一、代码生成"></a>方式一、代码生成<a class="article-anchor" href="#方式一、代码生成" aria-hidden="true"></a></h2><blockquote>
+<p>生成示例</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AutoGenerator</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        ConfigGenerator cg = <span class="keyword">new</span> ConfigGenerator();</div><div class="line"></div><div class="line">        <span class="comment">// 配置 MySQL 连接</span></div><div class="line">        cg.setDbDriverName(<span class="string">"com.mysql.jdbc.Driver"</span>);</div><div class="line">        cg.setDbUser(<span class="string">"username"</span>);</div><div class="line">        cg.setDbPassword(<span class="string">"password"</span>);</div><div class="line">        cg.setDbUrl(<span class="string">"jdbc:mysql://127.0.0.1:3306/mybatis-plus?characterEncoding=utf8"</span>);</div><div class="line"></div><div class="line">        <span class="comment">// 配置包名</span></div><div class="line">        cg.setEntityPackage(<span class="string">"com.baomidou.entity"</span>);</div><div class="line">        cg.setMapperPackage(<span class="string">"com.baomidou.mapper"</span>);</div><div class="line">        cg.setServicePackage(<span class="string">"com.baomidou.service"</span>);</div><div class="line">        cg.setXmlPackage(<span class="string">"com.baomidou.mapper.xml"</span>);</div><div class="line">        cg.setServiceImplPackage(<span class="string">"com.baomidou.service.impl"</span>);</div><div class="line"></div><div class="line">        <span class="comment">// 配置保存路径</span></div><div class="line">        cg.setSaveDir(<span class="string">"/path/to/src"</span>);</div><div class="line"></div><div class="line">        <span class="comment">// 其他参数请根据上面的参数说明自行配置，当所有配置完善后，运行AutoGenerator.run()方法生成Code</span></div><div class="line">        <span class="comment">// 生成代码</span></div><div class="line">        AutoGenerator.run(cg);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="方式二、Maven插件生成" class="article-heading"><a href="#方式二、Maven插件生成" class="headerlink" title="方式二、Maven插件生成"></a>方式二、Maven插件生成<a class="article-anchor" href="#方式二、Maven插件生成" aria-hidden="true"></a></h2><p>待补充（Maven代码生成插件尚未发布到中央库）</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2016-09-30T04:13:22.000Z" itemprop="dateModified">上次更新：2016-09-30</time>
+                <a href="configuration.html" class="article-footer-prev" title="集成教程"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="base-mapper.html" class="article-footer-next" title="通用Mapper和Service"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#参数说明"><span class="toc-text">参数说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#主键策略选择"><span class="toc-text">主键策略选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表及字段命名策略选择"><span class="toc-text">表及字段命名策略选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何生成代码"><span class="toc-text">如何生成代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方式一、代码生成"><span class="toc-text">方式一、代码生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方式二、Maven插件生成"><span class="toc-text">方式二、Maven插件生成</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">简介</a><a href="overview.html" class="sidebar-link">概览</a><a href="futures.html" class="sidebar-link">愿景</a><a href="architecture.html" class="sidebar-link">构架原理</a><strong class="sidebar-title">如何安装</strong><a href="dependency.html" class="sidebar-link">安装及依赖说明</a><a href="configuration.html" class="sidebar-link">集成教程</a><strong class="sidebar-title">如何使用</strong><a href="generate-code.html" class="sidebar-link current">代码生成</a><a href="base-mapper.html" class="sidebar-link">通用Mapper和Service</a><a href="entity-wrapper.html" class="sidebar-link">查询条件构造器EntityWrapper</a><a href="page-plugin.html" class="sidebar-link">分页插件</a><a href="performance-analysis-plugin.html" class="sidebar-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="sidebar-link">执行分析插件</a><a href="keywords-transfer.html" class="sidebar-link">数据库表关键词转义配置</a><a href="auto-fill.html" class="sidebar-link">表公共字段自定义填充</a><a href="sql-injector.html" class="sidebar-link">注入自定义公共方法SQL</a><a href="hot-loading.html" class="sidebar-link">Mapper对应XML文件热加载</a><strong class="sidebar-title">常见问题</strong><a href="faq-list.html" class="sidebar-link">问题列表</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2016 <a href="https://zespia.tw/" target="_blank">baomidou</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://github.com/baomidou/mybatis-plus" class="footer-link" target="_blank"><i class="fa fa-github-alt fa-fw"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link">首页</a><a href="/docs/" class="mobile-nav-link">文档</a><a href="/news/" class="mobile-nav-link">动态</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/baomidou/mybatis-plus" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">简介</a><a href="overview.html" class="mobile-nav-link">概览</a><a href="futures.html" class="mobile-nav-link">愿景</a><a href="architecture.html" class="mobile-nav-link">构架原理</a><strong class="mobile-nav-title">如何安装</strong><a href="dependency.html" class="mobile-nav-link">安装及依赖说明</a><a href="configuration.html" class="mobile-nav-link">集成教程</a><strong class="mobile-nav-title">如何使用</strong><a href="generate-code.html" class="mobile-nav-link current">代码生成</a><a href="base-mapper.html" class="mobile-nav-link">通用Mapper和Service</a><a href="entity-wrapper.html" class="mobile-nav-link">查询条件构造器EntityWrapper</a><a href="page-plugin.html" class="mobile-nav-link">分页插件</a><a href="performance-analysis-plugin.html" class="mobile-nav-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="mobile-nav-link">执行分析插件</a><a href="keywords-transfer.html" class="mobile-nav-link">数据库表关键词转义配置</a><a href="auto-fill.html" class="mobile-nav-link">表公共字段自定义填充</a><a href="sql-injector.html" class="mobile-nav-link">注入自定义公共方法SQL</a><a href="hot-loading.html" class="mobile-nav-link">Mapper对应XML文件热加载</a><strong class="mobile-nav-title">常见问题</strong><a href="faq-list.html" class="mobile-nav-link">问题列表</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/generate-code.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>

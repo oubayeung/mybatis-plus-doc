@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>通用Mapper和Service | Mybatis-Plus</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://mp.baomidou.com/docs/base-mapper.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://mp.baomidou.com/en/docs/base-mapper.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://mp.baomidou.com/docs/base-mapper.html">
+    
+  
+  <!-- CSS -->
+  <!-- build:css build/css/baomidou.css -->
+  <link rel="stylesheet" href="/css/baomidou.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Mybatis-Plus">
+  <!-- Open Graph -->
+  <meta name="description" content="通用Mapper和Service集成了单表CRUD的大部分方法，能够满足各类型的开发，下面我们来一览其包含的方法：
+
+insert(T entity)
+插入一条记录参数：entity 需要插入的实体类返回值：boolean 成功与否描述：插入entity实体
+
+insertSelective(T entity)
+选择性插入一条记录参数：entity 需要插入的实体类返回值：boolean 成功与否">
+<meta property="og:type" content="website">
+<meta property="og:title" content="通用Mapper和Service">
+<meta property="og:url" content="https://mp.baomidou.com/docs/base-mapper.html">
+<meta property="og:site_name" content="Mybatis-Plus">
+<meta property="og:description" content="通用Mapper和Service集成了单表CRUD的大部分方法，能够满足各类型的开发，下面我们来一览其包含的方法：
+
+insert(T entity)
+插入一条记录参数：entity 需要插入的实体类返回值：boolean 成功与否描述：插入entity实体
+
+insertSelective(T entity)
+选择性插入一条记录参数：entity 需要插入的实体类返回值：boolean 成功与否">
+<meta property="og:updated_time" content="2016-09-30T04:16:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="通用Mapper和Service">
+<meta name="twitter:description" content="通用Mapper和Service集成了单表CRUD的大部分方法，能够满足各类型的开发，下面我们来一览其包含的方法：
+
+insert(T entity)
+插入一条记录参数：entity 需要插入的实体类返回值：boolean 成功与否描述：插入entity实体
+
+insertSelective(T entity)
+选择性插入一条记录参数：entity 需要插入的实体类返回值：boolean 成功与否">
+  <!-- Google Analytics -->
+  
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/" class="main-nav-link">首页</a><a href="/docs/" class="main-nav-link">文档</a><a href="/news/" class="main-nav-link">动态</a>
+      <a href="https://github.com/baomidou/mybatis-plus" class="main-nav-link"><i class="fa fa-github-alt fa-fw"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/base-mapper.html">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">通用Mapper和Service</h1>
+                <a href="https://github.com/baomidou/mybatis-plus-doc/edit/master/source/docs/base-mapper.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>通用Mapper和Service集成了单表CRUD的大部分方法，能够满足各类型的开发，下面我们来一览其包含的方法：</p>
+<hr>
+<p><code>insert(T entity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">插入一条记录</div><div class="line"></div><div class="line">参数：entity 需要插入的实体类</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：插入entity实体</div></pre></td></tr></table></figure>
+<hr>
+<p><code>insertSelective(T entity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">选择性插入一条记录</div><div class="line"></div><div class="line">参数：entity 需要插入的实体类</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：null字段不插入</div></pre></td></tr></table></figure>
+<hr>
+<p><code>insertBatch(List&lt;T&gt; entityList)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">批量插入</div><div class="line"></div><div class="line">参数：entityList 需要插入的实体类集合</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：推荐批量操作的时候使用对应的批量操作，for循环性能很低的。注意！该方法不适合 Oracle！</div></pre></td></tr></table></figure>
+<hr>
+<p><code>deleteById(PK id)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">删除一条记录</div><div class="line"></div><div class="line">参数：id 需要删除数据的主键ID</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：根据id删除数据</div></pre></td></tr></table></figure>
+<hr>
+<p><code>deleteByMap(Map&lt;String, Object&gt; columnMap)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">根据自定义Map来进行删除</div><div class="line"></div><div class="line">参数：columnMap 自定义Map作为删除条件</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：比如 columnMap.put(&quot;name&quot;, &quot;zhangsan&quot;)，删除的时候将会去删除name为zhangsan的数据。</div></pre></td></tr></table></figure>
+<hr>
+<p><code>deleteSelective(T entity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">根据实体类选择性删除</div><div class="line"></div><div class="line">参数：entity Entity的属性值作为删除条件</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：比如 entity.setName(&quot;zhangsan&quot;)，删除的时候将会去删除name为zhangsan的数据。</div></pre></td></tr></table></figure>
+<hr>
+<p><code>deleteBatchIds(List&lt;PK&gt; idList)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">批量删除</div><div class="line"></div><div class="line">参数：idList 需要删除数据的ID集合</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：根据idList集合进行批量删除</div></pre></td></tr></table></figure>
+<hr>
+<p><code>updateById(T entity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">通过ID更新数据</div><div class="line"></div><div class="line">参数：entity 需要更新的实体类</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：通过ID更新entity</div></pre></td></tr></table></figure>
+<hr>
+<p><code>updateSelectiveById(T entity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">通过ID选择性更新数据</div><div class="line"></div><div class="line">参数：entity 需要更新的实体类</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：null字段不更新</div></pre></td></tr></table></figure>
+<hr>
+<p><code>update(T entity, T whereEntity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">通过实体类构造where条件进行更新</div><div class="line"></div><div class="line">参数：entity 需要更新的实体类 whereEntity 条件实体</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：比如 whereEntity.setName(&quot;zhangsan&quot;)，查找name为zhangsan的数据进行更新，更新的内容是entity中的数据</div></pre></td></tr></table></figure>
+<hr>
+<p><code>updateSelective(T entity, T whereEntity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">通过实体类构造where条件进行选择性更新</div><div class="line"></div><div class="line">参数：entity 需要更新的实体类 whereEntity 条件实体</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：null字段不更新</div></pre></td></tr></table></figure>
+<hr>
+<p><code>updateBatchById(List&lt;T&gt; entityList)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">通过ID批量更新</div><div class="line"></div><div class="line">参数：entityList 需要更新的实体类集合</div><div class="line">返回值：boolean 成功与否</div><div class="line">描述：通过entityList实体集合批量更新数据</div></pre></td></tr></table></figure>
+<hr>
+<p><code>selectById(PK id)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">通过ID查询一条数据</div><div class="line"></div><div class="line">参数：id 主键ID</div><div class="line">返回值：T 封装后的实体</div><div class="line">描述：根据ID查询数据</div></pre></td></tr></table></figure>
+<hr>
+<p><code>selectBatchIds(List&lt;PK&gt; idList)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">通过ID批量查询</div><div class="line"></div><div class="line">参数：idList 需要查询的ID集合</div><div class="line">返回值：List&lt;T&gt; 查询到的数据集合</div><div class="line">描述：通过idList集合批量查询</div></pre></td></tr></table></figure>
+<hr>
+<p><code>selectByMap(Map&lt;String, Object&gt; columnMap)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">根据自定义Map来进行查询</div><div class="line"></div><div class="line">参数：columnMap 自定义Map作为where条件</div><div class="line">返回值：List&lt;T&gt; 查询到的数据集合</div><div class="line">描述：通过自定义Map进行查询</div></pre></td></tr></table></figure>
+<hr>
+<p><code>selectOne(T entity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">根据 entity 条件，查询一条记录</div><div class="line"></div><div class="line">参数：entity 查询条件实体对象</div><div class="line">返回值：T 封装后的实体</div><div class="line">描述：比如 entity.setName(&quot;zhangsan&quot;)，将会去查询name为zhangsan的数据。</div></pre></td></tr></table></figure>
+<hr>
+<p><code>selectCount(T entity)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">根据 entity 条件，查询总记录数</div><div class="line"></div><div class="line">参数：entity 查询条件实体对象</div><div class="line">返回值：int 数值</div><div class="line">描述：通过entity构造条件进行统计查询</div></pre></td></tr></table></figure>
+<hr>
+<p><code>selectList(EntityWrapper&lt;T&gt; entityWrapper)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">根据entityWrapper进行查询</div><div class="line"></div><div class="line">参数：entityWrapper 实体包装类（主要用于构建查询条件）</div><div class="line">返回值：List&lt;T&gt; 查询到的实体集合</div><div class="line">描述：entityWrapper请详看查询条件构造器EntityWrapper文档。</div></pre></td></tr></table></figure>
+<hr>
+<p><code>selectPage(Page&lt;T&gt; page, EntityWrapper&lt;T&gt; entityWrapper)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">翻页查询</div><div class="line"></div><div class="line">参数：page 分页对象 entityWrapper 实体包装类（主要用于构建查询条件）</div><div class="line">返回值：Page&lt;T&gt; 返回Page对象</div><div class="line">描述：page请详看分页插件文档，entityWrapper请详看查询条件构造器EntityWrapper文档。</div><div class="line">selectPage查询后，将会把查询到的数据set进Page的records属性中，而其他的分页相关的代码也会set进对应的属性。</div></pre></td></tr></table></figure>
+<hr>
+<p>如果需要示例，请参考源码中Test中的相应示例，<a href="https://github.com/baomidou/mybatis-plus/blob/master/mybatis-plus/src/test/java/com/baomidou/mybatisplus/test/mysql/UserMapperTest.java" target="_blank" rel="external">点此去查看</a>。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2016-09-30T04:16:31.000Z" itemprop="dateModified">上次更新：2016-09-30</time>
+                <a href="generate-code.html" class="article-footer-prev" title="代码生成"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="entity-wrapper.html" class="article-footer-next" title="查询条件构造器EntityWrapper"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">简介</a><a href="overview.html" class="sidebar-link">概览</a><a href="futures.html" class="sidebar-link">愿景</a><a href="architecture.html" class="sidebar-link">构架原理</a><strong class="sidebar-title">如何安装</strong><a href="dependency.html" class="sidebar-link">安装及依赖说明</a><a href="configuration.html" class="sidebar-link">集成教程</a><strong class="sidebar-title">如何使用</strong><a href="generate-code.html" class="sidebar-link">代码生成</a><a href="base-mapper.html" class="sidebar-link current">通用Mapper和Service</a><a href="entity-wrapper.html" class="sidebar-link">查询条件构造器EntityWrapper</a><a href="page-plugin.html" class="sidebar-link">分页插件</a><a href="performance-analysis-plugin.html" class="sidebar-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="sidebar-link">执行分析插件</a><a href="keywords-transfer.html" class="sidebar-link">数据库表关键词转义配置</a><a href="auto-fill.html" class="sidebar-link">表公共字段自定义填充</a><a href="sql-injector.html" class="sidebar-link">注入自定义公共方法SQL</a><a href="hot-loading.html" class="sidebar-link">Mapper对应XML文件热加载</a><strong class="sidebar-title">常见问题</strong><a href="faq-list.html" class="sidebar-link">问题列表</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2016 <a href="https://zespia.tw/" target="_blank">baomidou</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://github.com/baomidou/mybatis-plus" class="footer-link" target="_blank"><i class="fa fa-github-alt fa-fw"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link">首页</a><a href="/docs/" class="mobile-nav-link">文档</a><a href="/news/" class="mobile-nav-link">动态</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/baomidou/mybatis-plus" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">简介</a><a href="overview.html" class="mobile-nav-link">概览</a><a href="futures.html" class="mobile-nav-link">愿景</a><a href="architecture.html" class="mobile-nav-link">构架原理</a><strong class="mobile-nav-title">如何安装</strong><a href="dependency.html" class="mobile-nav-link">安装及依赖说明</a><a href="configuration.html" class="mobile-nav-link">集成教程</a><strong class="mobile-nav-title">如何使用</strong><a href="generate-code.html" class="mobile-nav-link">代码生成</a><a href="base-mapper.html" class="mobile-nav-link current">通用Mapper和Service</a><a href="entity-wrapper.html" class="mobile-nav-link">查询条件构造器EntityWrapper</a><a href="page-plugin.html" class="mobile-nav-link">分页插件</a><a href="performance-analysis-plugin.html" class="mobile-nav-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="mobile-nav-link">执行分析插件</a><a href="keywords-transfer.html" class="mobile-nav-link">数据库表关键词转义配置</a><a href="auto-fill.html" class="mobile-nav-link">表公共字段自定义填充</a><a href="sql-injector.html" class="mobile-nav-link">注入自定义公共方法SQL</a><a href="hot-loading.html" class="mobile-nav-link">Mapper对应XML文件热加载</a><strong class="mobile-nav-title">常见问题</strong><a href="faq-list.html" class="mobile-nav-link">问题列表</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/base-mapper.html">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+
+</body>
+</html>
