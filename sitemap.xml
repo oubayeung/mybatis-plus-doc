@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mp.baomidou.com/docs/execution-analysis-plugin.html</loc>
+    
+    <lastmod>2016-09-30T04:22:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mp.baomidou.com/docs/faq-list.html</loc>
     
     <lastmod>2016-09-30T04:20:01.000Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>https://mp.baomidou.com/docs/generate-code.html</loc>
     
     <lastmod>2016-09-30T04:13:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/execution-analysis-plugin.html</loc>
-    
-    <lastmod>2016-09-30T04:13:08.000Z</lastmod>
     
   </url>
   
