@@ -2,30 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://mp.baomidou.com/docs/base-mapper.html</loc>
+    <loc>https://mp.baomidou.com/404.html</loc>
     
-    <lastmod>2016-09-30T07:52:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/entity-wrapper.html</loc>
-    
-    <lastmod>2016-09-30T07:36:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/generate-code.html</loc>
-    
-    <lastmod>2016-09-30T07:34:37.000Z</lastmod>
+    <lastmod>2016-09-30T08:19:57.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://mp.baomidou.com/docs/configuration.html</loc>
     
-    <lastmod>2016-09-30T07:27:29.000Z</lastmod>
+    <lastmod>2016-09-30T07:57:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/common-crud.html</loc>
+    
+    <lastmod>2016-09-30T07:52:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/criteria-constructor.html</loc>
+    
+    <lastmod>2016-09-30T07:36:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/code-generator.html</loc>
+    
+    <lastmod>2016-09-30T07:34:37.000Z</lastmod>
     
   </url>
   

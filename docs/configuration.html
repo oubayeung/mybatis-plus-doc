@@ -25,19 +25,25 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Mybatis-Plus">
   <!-- Open Graph -->
-  <meta name="description" content="SpringMVC方式在进行配置之前，请确保MP本地和其依赖包都已配置好，详见安装及依赖说明
-spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;bean">
+  <meta name="description" content="SpringMVC方式
+在进行配置之前，请确保MP本地和其依赖包都已配置好!
+
+spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;bean id=&quot;sq">
 <meta property="og:type" content="website">
 <meta property="og:title" content="集成教程">
 <meta property="og:url" content="https://mp.baomidou.com/docs/configuration.html">
 <meta property="og:site_name" content="Mybatis-Plus">
-<meta property="og:description" content="SpringMVC方式在进行配置之前，请确保MP本地和其依赖包都已配置好，详见安装及依赖说明
-spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;bean">
-<meta property="og:updated_time" content="2016-09-30T07:27:29.000Z">
+<meta property="og:description" content="SpringMVC方式
+在进行配置之前，请确保MP本地和其依赖包都已配置好!
+
+spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;bean id=&quot;sq">
+<meta property="og:updated_time" content="2016-09-30T07:57:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集成教程">
-<meta name="twitter:description" content="SpringMVC方式在进行配置之前，请确保MP本地和其依赖包都已配置好，详见安装及依赖说明
-spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;bean">
+<meta name="twitter:description" content="SpringMVC方式
+在进行配置之前，请确保MP本地和其依赖包都已配置好!
+
+spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&amp;lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&amp;gt;&amp;lt;bean id=&quot;sq">
   <!-- Google Analytics -->
   
 </head>
@@ -89,14 +95,16 @@ spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&am
                 <a href="https://github.com/baomidou/mybatis-plus-doc/edit/master/source/docs/configuration.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="SpringMVC方式" class="article-heading"><a href="#SpringMVC方式" class="headerlink" title="SpringMVC方式"></a>SpringMVC方式<a class="article-anchor" href="#SpringMVC方式" aria-hidden="true"></a></h1><p>在进行配置之前，请确保MP本地和其依赖包都已配置好，详见<strong>安装及依赖说明</strong></p>
+                <h1 id="SpringMVC方式" class="article-heading"><a href="#SpringMVC方式" class="headerlink" title="SpringMVC方式"></a>SpringMVC方式<a class="article-anchor" href="#SpringMVC方式" aria-hidden="true"></a></h1><blockquote>
+<p>在进行配置之前，请确保MP本地和其依赖包都已配置好!</p>
+</blockquote>
 <figure class="highlight xml"><figcaption><span>spring-mybatis.xml</span></figcaption><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- MyBatis SqlSessionFactoryBean 配置 --&gt;</span></div><div class="line"><span class="comment">&lt;!-- 注意：这里使用的是MP的MybatisSqlSessionFactoryBean，而不是Mybatis的，因为MP需要进行相应代理 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 配置数据源 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 配置Mybatis配置文件 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"configLocation"</span> <span class="attr">value</span>=<span class="string">"classpath:xml/mybatis-config.xml"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 配置别名包路径 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"typeAliasesPackage"</span> <span class="attr">value</span>=<span class="string">"xxx.entity"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 配置Mapper扫描路径（IDEA系列编辑器需要特别注意，因为IDEA的设置问题，src中的xml文件是不会被编译的，如果放在src中可能会报错，解决办法详见 常用问题-Invalid bound statement (not found) 错误如何解决?） --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"mapperLocations"</span> <span class="attr">value</span>=<span class="string">"classpath:com/xx/mapper/xml/*Mapper.xml"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 插件配置项  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"plugins"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">array</span>&gt;</span></div><div class="line">            <span class="comment">&lt;!-- 分页插件配置 --&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"paginationInterceptor"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.mybatisplus.plugins.PaginationInterceptor"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dialectType"</span> <span class="attr">value</span>=<span class="string">"mysql"</span> /&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">array</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- Oracle需要添加该项 --&gt;</span></div><div class="line">    <span class="comment">&lt;!-- &lt;property name="dbType" value="oracle" /&gt; --&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- 全局表为下划线命名设置 true --&gt;</span></div><div class="line">    <span class="comment">&lt;!-- &lt;property name="dbColumnUnderline" value="true" /&gt; --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 配置Mapper扫描路径 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"mapperScannerConfigurer"</span> <span class="attr">class</span>=<span class="string">"org.mybatis.spring.mapper.MapperScannerConfigurer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"basePackage"</span> <span class="attr">value</span>=<span class="string">"xxx.mapper"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div></pre></td></tr></table></figure>
 <h1 id="SpringBoot形式" class="article-heading"><a href="#SpringBoot形式" class="headerlink" title="SpringBoot形式"></a>SpringBoot形式<a class="article-anchor" href="#SpringBoot形式" aria-hidden="true"></a></h1><p>文档待补充，可先行查看Demo：<a href="https://github.com/baomidou/mybatisplus-spring-boot" target="_blank" rel="external">Github</a>、<a href="http://git.oschina.net/baomidou/mybatisplus-spring-boot" target="_blank" rel="external">OSC</a></p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-09-30T07:27:29.000Z" itemprop="dateModified">上次更新：2016-09-30</time>
-                <a href="dependency.html" class="article-footer-prev" title="安装及依赖说明"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="generate-code.html" class="article-footer-next" title="代码生成器"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2016-09-30T07:57:52.000Z" itemprop="dateModified">上次更新：2016-09-30</time>
+                <a href="dependency.html" class="article-footer-prev" title="安装及依赖说明"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="code-generator.html" class="article-footer-next" title="代码生成器"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
@@ -111,7 +119,7 @@ spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&am
         </div>
       </article>
       <aside id="sidebar" role="navigation">
-  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">简介</a><a href="overview.html" class="sidebar-link">概览</a><a href="futures.html" class="sidebar-link">愿景</a><a href="architecture.html" class="sidebar-link">构架原理</a><strong class="sidebar-title">如何安装</strong><a href="dependency.html" class="sidebar-link">安装及依赖说明</a><a href="configuration.html" class="sidebar-link current">集成教程</a><strong class="sidebar-title">如何使用</strong><a href="generate-code.html" class="sidebar-link">代码生成器</a><a href="base-mapper.html" class="sidebar-link">通用CRUD方法</a><a href="entity-wrapper.html" class="sidebar-link">条件构造器</a><a href="page-plugin.html" class="sidebar-link">分页插件</a><a href="performance-analysis-plugin.html" class="sidebar-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="sidebar-link">执行分析插件</a><a href="keywords-transfer.html" class="sidebar-link">关键词转义配置</a><a href="auto-fill.html" class="sidebar-link">公共字段自动填充</a><a href="sql-injector.html" class="sidebar-link">注入自定义SQL</a><a href="hot-loading.html" class="sidebar-link">XML文件热加载</a><strong class="sidebar-title">常见问题</strong><a href="faq-list.html" class="sidebar-link">问题列表</a></div>
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">简介</a><a href="overview.html" class="sidebar-link">概览</a><a href="futures.html" class="sidebar-link">愿景</a><a href="architecture.html" class="sidebar-link">构架原理</a><strong class="sidebar-title">如何安装</strong><a href="dependency.html" class="sidebar-link">安装及依赖说明</a><a href="configuration.html" class="sidebar-link current">集成教程</a><strong class="sidebar-title">如何使用</strong><a href="code-generator.html" class="sidebar-link">代码生成器</a><a href="common-crud.html" class="sidebar-link">通用CRUD方法</a><a href="criteria-constructor.html" class="sidebar-link">条件构造器</a><a href="page-plugin.html" class="sidebar-link">分页插件</a><a href="performance-analysis-plugin.html" class="sidebar-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="sidebar-link">执行分析插件</a><a href="keywords-transfer.html" class="sidebar-link">关键词转义</a><a href="auto-fill.html" class="sidebar-link">自动填充</a><a href="sql-injector.html" class="sidebar-link">自定义SQL注入</a><a href="hot-loading.html" class="sidebar-link">热加载</a><strong class="sidebar-title">常见问题</strong><a href="faq-list.html" class="sidebar-link">问题列表</a></div>
 </aside>
     </div>
   </div>
@@ -120,7 +128,7 @@ spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&am
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2016 <a href="https://zespia.tw/" target="_blank">baomidou</a><br>
+      &copy; 2016 <a href="https://github.com/baomidou" target="_blank">baomidou</a><br>
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
     </div>
     <div id="footer-links">
@@ -140,7 +148,7 @@ spring-mybatis.xml&amp;lt;!-- MyBatis SqlSessionFactoryBean 配置 --&amp;gt;&am
       </li>
     </ul>
     
-      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">简介</a><a href="overview.html" class="mobile-nav-link">概览</a><a href="futures.html" class="mobile-nav-link">愿景</a><a href="architecture.html" class="mobile-nav-link">构架原理</a><strong class="mobile-nav-title">如何安装</strong><a href="dependency.html" class="mobile-nav-link">安装及依赖说明</a><a href="configuration.html" class="mobile-nav-link current">集成教程</a><strong class="mobile-nav-title">如何使用</strong><a href="generate-code.html" class="mobile-nav-link">代码生成器</a><a href="base-mapper.html" class="mobile-nav-link">通用CRUD方法</a><a href="entity-wrapper.html" class="mobile-nav-link">条件构造器</a><a href="page-plugin.html" class="mobile-nav-link">分页插件</a><a href="performance-analysis-plugin.html" class="mobile-nav-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="mobile-nav-link">执行分析插件</a><a href="keywords-transfer.html" class="mobile-nav-link">关键词转义配置</a><a href="auto-fill.html" class="mobile-nav-link">公共字段自动填充</a><a href="sql-injector.html" class="mobile-nav-link">注入自定义SQL</a><a href="hot-loading.html" class="mobile-nav-link">XML文件热加载</a><strong class="mobile-nav-title">常见问题</strong><a href="faq-list.html" class="mobile-nav-link">问题列表</a>
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">简介</a><a href="overview.html" class="mobile-nav-link">概览</a><a href="futures.html" class="mobile-nav-link">愿景</a><a href="architecture.html" class="mobile-nav-link">构架原理</a><strong class="mobile-nav-title">如何安装</strong><a href="dependency.html" class="mobile-nav-link">安装及依赖说明</a><a href="configuration.html" class="mobile-nav-link current">集成教程</a><strong class="mobile-nav-title">如何使用</strong><a href="code-generator.html" class="mobile-nav-link">代码生成器</a><a href="common-crud.html" class="mobile-nav-link">通用CRUD方法</a><a href="criteria-constructor.html" class="mobile-nav-link">条件构造器</a><a href="page-plugin.html" class="mobile-nav-link">分页插件</a><a href="performance-analysis-plugin.html" class="mobile-nav-link">性能分析插件</a><a href="execution-analysis-plugin.html" class="mobile-nav-link">执行分析插件</a><a href="keywords-transfer.html" class="mobile-nav-link">关键词转义</a><a href="auto-fill.html" class="mobile-nav-link">自动填充</a><a href="sql-injector.html" class="mobile-nav-link">自定义SQL注入</a><a href="hot-loading.html" class="mobile-nav-link">热加载</a><strong class="mobile-nav-title">常见问题</strong><a href="faq-list.html" class="mobile-nav-link">问题列表</a>
     
   </div>
   <div id="mobile-lang-select-wrap">
