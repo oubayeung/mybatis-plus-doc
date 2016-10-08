@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mp.baomidou.com/docs/index.html</loc>
+    
+    <lastmod>2016-10-08T06:48:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/futures.html</loc>
+    
+    <lastmod>2016-10-08T06:44:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mp.baomidou.com/en/index.html</loc>
     
     <lastmod>2016-10-08T06:37:21.000Z</lastmod>
@@ -12,20 +26,6 @@
     <loc>https://mp.baomidou.com/docs/code-generator.html</loc>
     
     <lastmod>2016-09-30T10:01:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/futures.html</loc>
-    
-    <lastmod>2016-09-30T09:13:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/index.html</loc>
-    
-    <lastmod>2016-09-30T09:10:13.000Z</lastmod>
     
   </url>
   
