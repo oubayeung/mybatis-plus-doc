@@ -2,156 +2,156 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://mp.baomidou.com/docs/index.html</loc>
-    
-    <lastmod>2016-10-08T06:48:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://mp.baomidou.com/docs/futures.html</loc>
     
-    <lastmod>2016-10-08T06:44:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/en/index.html</loc>
-    
-    <lastmod>2016-10-08T06:37:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/code-generator.html</loc>
-    
-    <lastmod>2016-09-30T10:01:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/execution-analysis-plugin.html</loc>
-    
-    <lastmod>2016-09-30T08:54:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/404.html</loc>
-    
-    <lastmod>2016-09-30T08:35:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/configuration.html</loc>
-    
-    <lastmod>2016-09-30T07:57:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/general-crud.html</loc>
-    
-    <lastmod>2016-09-30T07:52:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/criteria-constructor.html</loc>
-    
-    <lastmod>2016-09-30T07:36:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/overview.html</loc>
-    
-    <lastmod>2016-09-30T07:24:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/dependency.html</loc>
-    
-    <lastmod>2016-09-30T06:25:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/architecture.html</loc>
-    
-    <lastmod>2016-09-30T06:20:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/hot-loading.html</loc>
-    
-    <lastmod>2016-09-30T05:05:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/sql-injector.html</loc>
-    
-    <lastmod>2016-09-30T05:05:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/auto-fill.html</loc>
-    
-    <lastmod>2016-09-30T05:05:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/keywords-transfer.html</loc>
-    
-    <lastmod>2016-09-30T05:04:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/faq-list.html</loc>
-    
-    <lastmod>2016-09-30T04:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/performance-analysis-plugin.html</loc>
-    
-    <lastmod>2016-09-30T04:14:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/docs/page-plugin.html</loc>
-    
-    <lastmod>2016-09-30T04:14:11.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mp.baomidou.com/news/2016/09/29/hello-hexo/</loc>
-    
-    <lastmod>2016-09-30T03:47:57.000Z</lastmod>
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://mp.baomidou.com/en/docs/index.html</loc>
     
-    <lastmod>2016-09-30T03:18:38.000Z</lastmod>
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://mp.baomidou.com/index.html</loc>
     
-    <lastmod>2016-09-30T01:54:07.000Z</lastmod>
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/en/index.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/auto-fill.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/code-generator.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/configuration.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/criteria-constructor.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/dependency.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/execution-analysis-plugin.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/faq-list.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/sql-injector.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/general-crud.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/hot-loading.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/index.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/keywords-transfer.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/overview.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/page-plugin.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/performance-analysis-plugin.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/404.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.402Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/docs/architecture.html</loc>
+    
+    <lastmod>2016-10-08T08:15:49.402Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mp.baomidou.com/news/2016/09/28/hello-hexo/</loc>
+    
+    <lastmod>2016-10-08T08:15:49.402Z</lastmod>
     
   </url>
   
