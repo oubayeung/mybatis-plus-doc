@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mp.baomidou.com/"/>
-  <updated>2016-10-10T14:27:19.086Z</updated>
+  <updated>2016-10-14T07:53:47.143Z</updated>
   <id>https://mp.baomidou.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://mp.baomidou.com/news/2016/09/29/hello-hexo/"/>
     <id>https://mp.baomidou.com/news/2016/09/29/hello-hexo/</id>
     <published>2016-09-28T16:00:00.000Z</published>
-    <updated>2016-10-10T14:27:19.086Z</updated>
+    <updated>2016-10-14T07:53:47.143Z</updated>
     
     <content type="html"><![CDATA[<p>Mybatis-Plus 文档现已迁移到 <code>Github Pages</code> 和 <code>Coding Pages</code> 上，采用 <a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Hexo</a> 构建，欢迎大家提出反馈~</p>
 <p>感谢 <a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Hexo</a>！<br>感谢前辈 <a href="https://github.com/hexojs/site" target="_blank" rel="external">Hexo Docs</a>、<a href="https://github.com/meolu/docs" target="_blank" rel="external">Walle Docs</a> 作为参考!如果本文档代码侵犯了前辈们的权益，请及时联系进行相应整改~</p>
