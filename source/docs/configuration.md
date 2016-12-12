@@ -35,7 +35,9 @@ title: 集成教程
 
     <!-- 全局表为下划线命名设置 true -->
     <!-- <property name="dbColumnUnderline" value="true" /> -->
-<bean>
+    <property name="sqlInjector" ref="autosqlinjector"/>
+</bean>
+<bean id="autosqlinjector" class="com.baomidou.mybatisplus.mapper.AutoSqlInjector"/>
 
 <!-- 配置Mapper扫描路径 -->
 <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
