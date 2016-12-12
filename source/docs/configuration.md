@@ -29,7 +29,8 @@ title: 集成教程
     <property name="globalConfig" ref="globalConfig" />
 </bean>
 <bean id="globalConfig" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
-	<property name="idType" value="0" />
+    <!-- ID 策略，值配置参考源码 -->
+    <!-- <property name="idType" value="0" /> -->
     <!-- Oracle需要添加该项 -->
     <!-- <property name="dbType" value="oracle" /> -->
 
