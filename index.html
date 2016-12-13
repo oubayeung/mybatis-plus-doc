@@ -16,7 +16,7 @@
     
   
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/baomidou-9a9876c98a.css">
+  <link rel="stylesheet" href="/build/css/baomidou-37cd34c40e.css">
   <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   <link href="//cdn.bootcss.com/docsearch.js/2.1.8/docsearch.min.css" rel="stylesheet">
   <!-- RSS -->
@@ -28,7 +28,7 @@
 <meta property="og:url" content="https://mp.baomidou.com/index.html">
 <meta property="og:site_name" content="Mybatis-Plus">
 <meta property="og:description" content="A enhanced toolkit of Mybatis to simplify the operation of CURD.">
-<meta property="og:updated_time" content="2016-12-13T03:36:40.992Z">
+<meta property="og:updated_time" content="2016-12-13T16:40:00.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis-Plus">
 <meta name="twitter:description" content="A enhanced toolkit of Mybatis to simplify the operation of CURD.">
@@ -67,7 +67,7 @@ var _hmt = _hmt || [];
       <a href="/" id="logo">Hexo</a>
     </h1>
     <nav id="main-nav">
-      <a href="/" class="main-nav-link">首页</a><a href="/docs/" class="main-nav-link">文档</a><a href="/news/" class="main-nav-link">动态</a>
+      <a href="/" class="main-nav-link">首页</a><a href="/docs/" class="main-nav-link">文档</a><a href="/api/" class="main-nav-link">API</a><a href="/news/" class="main-nav-link">动态</a>
       <a href="https://github.com/baomidou/mybatis-plus" class="main-nav-link"><i class="fa fa-github-alt fa-fw"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
@@ -98,17 +98,20 @@ var _hmt = _hmt || [];
   <div class="inner">
     <h2 id="banner-title">为简化开发、提高效率而生</h2>
     <div id="banner-start">
+      <span id="banner-start-command"></span>
     </div>
     <div id="banner-share"><!-- GitHub Star -->
-<iframe src="https://ghbtns.com/github-btn.html?user=baomidou&repo=mybatis-plus&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=baomidou&repo=mybatis-plus&type=star" frameborder="0" scrolling="0" width="84px" height="20px"></iframe>
 <!-- GitHub fork -->
-<iframe src="https://ghbtns.com/github-btn.html?user=baomidou&repo=mybatis-plus&type=fork&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe></div>
+<iframe src="https://ghbtns.com/github-btn.html?user=baomidou&repo=mybatis-plus&type=fork" frameborder="0" scrolling="0" width="84px" height="20px"></iframe>
+<!-- GitHub Release -->
+<a href="https://github.com/baomidou/mybatis-plus/releases"><img src="https://img.shields.io/github/release/baomidou/mybatis-plus.svg?maxAge=2592000"></a></div>
   </div>
 </header>
 <div id="content-wrap">
   <div class="wrapper">
     <div class="inner">
-      <ul id="intro-feature-list"><li class="intro-feature-wrap"><div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-code-fork fa-fw"></i></div><h3 class="intro-feature-title">纯正血统</h3><p class="intro-feature-desc">完全继承原生 Mybatis 的所有特性</p></div></li><li class="intro-feature-wrap"><div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-leaf fa-fw"></i></div><h3 class="intro-feature-title">最少依赖</h3><p class="intro-feature-desc">仅仅依赖 Mybatis 以及 Mybatis-Spring</p></div></li><li class="intro-feature-wrap"><div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-bolt fa-fw"></i></div><h3 class="intro-feature-title">无损性能</h3><p class="intro-feature-desc">启动即会自动注入基本CURD，性能无损耗，直接面向对象操作</p></div></li><li class="intro-feature-wrap"><div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-cog fa-fw"></i></div><h3 class="intro-feature-title">丰富功能</h3><p class="intro-feature-desc">拥有通用Mapper、分页、自动代码等功能，更有各类插件供你使用</p></div></li></ul>
+      <ul id="intro-feature-list"><li class="intro-feature-wrap"><div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-code-fork fa-fw"></i></div><h3 class="intro-feature-title">纯正血统</h3><p class="intro-feature-desc">完全继承原生 Mybatis 的所有特性</p></div></li><li class="intro-feature-wrap"><div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-leaf fa-fw"></i></div><h3 class="intro-feature-title">最少依赖</h3><p class="intro-feature-desc">仅仅依赖 Mybatis 以及 Mybatis-Spring</p></div></li><li class="intro-feature-wrap"><div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-bolt fa-fw"></i></div><h3 class="intro-feature-title">无损性能</h3><p class="intro-feature-desc">启动即会自动注入基本CURD，性能无损耗</p></div></li><li class="intro-feature-wrap"><div class="intro-feature"><div class="intro-feature-icon"><i class="fa fa-cog fa-fw"></i></div><h3 class="intro-feature-title">丰富功能</h3><p class="intro-feature-desc">AR语法糖、代码生成器、分页插件、通用DAO操作等</p></div></li></ul>
       <div id="intro-get-started-wrap">
         <a href="docs/" id="intro-get-started-link">开始使用</a>
       </div>
@@ -132,7 +135,7 @@ var _hmt = _hmt || [];
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/" class="mobile-nav-link">首页</a><a href="/docs/" class="mobile-nav-link">文档</a><a href="/news/" class="mobile-nav-link">动态</a>
+      <a href="/" class="mobile-nav-link">首页</a><a href="/docs/" class="mobile-nav-link">文档</a><a href="/api/" class="mobile-nav-link">API</a><a href="/news/" class="mobile-nav-link">动态</a>
       <li class="mobile-nav-item">
         <a href="https://github.com/baomidou/mybatis-plus" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
       </li>
@@ -151,7 +154,7 @@ var _hmt = _hmt || [];
   </div>
 </nav>
   <!-- Scripts -->
-<script src="/build/js/main-aa9dd17b1d.js"></script>
+<script src="/build/js/main-c5c586d81d.js"></script>
 
 <!-- Algolia -->
 

@@ -132,6 +132,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  -webkit-transition: background-color 150ms ease-out, color 150ms ease-out;
+  -moz-transition: background-color 150ms ease-out, color 150ms ease-out;
+  -ms-transition: background-color 150ms ease-out, color 150ms ease-out;
+  transition: background-color 150ms ease-out, color 150ms ease-out;
 }
 .wrapper:before,
 .wrapper:after {
@@ -261,8 +265,8 @@ body {
 }
 #search-input-wrap {
   display: none;
-  padding-left: 6px;
-  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #999;
 }
 #search-input-wrap.on {
@@ -342,14 +346,50 @@ body {
 }
 #banner-start-command {
   background: #fff;
-  font-family: Monaco, "Source Code Pro", Menlo, Consolas, monospace;
+  font-family: 'Pingfang SC', 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
   display: inline-block;
   padding: 15px 20px;
 }
-#banner-start-command:before {
-  content: "$";
+#banner-start-command:after {
+  content: '|';
   opacity: 0.5;
   padding-right: 10px;
+  -webkit-animation: blink 800ms infinite;
+  -moz-animation: blink 800ms infinite;
+  -ms-animation: blink 800ms infinite;
+  animation: blink 800ms infinite;
+}
+@-moz-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #banner-start-link {
   color: #fff;
