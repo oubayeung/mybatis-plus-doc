@@ -4,7 +4,7 @@ title: 代码生成器
 
 # 参数说明
 
-参数相关的配置，详见[ConfigGenerator](https://github.com/baomidou/mybatis-plus/blob/master/mybatis-plus/src/main/java/com/baomidou/mybatisplus/generator/ConfigGenerator.java)类
+参数相关的配置，详见[config包](https://github.com/baomidou/mybatis-plus/tree/master/mybatis-plus/src/main/java/com/baomidou/mybatisplus/generator/config)类
 
 ```java saveDir
 类型：String
