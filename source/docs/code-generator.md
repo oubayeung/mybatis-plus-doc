@@ -238,7 +238,7 @@ public class MpGenerator {
 
 		// 包配置
 		PackageConfig pc = new PackageConfig();
-		pc.serParent("com.baomidou");
+		pc.setParent("com.baomidou");
 		pc.setModuleName("test");
 		mpg.setPackageInfo(pc);
 
